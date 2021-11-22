@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="98.0" prefWidth="283.0" scaleShape="false" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ventanaEmergenteController">
+   <children>
+      <Label fx:id="txtMensajeID" alignment="CENTER" layoutX="10.0" layoutY="20.0" prefHeight="23.0" prefWidth="261.0" text="Dato eliminado">
+         <font>
+            <Font name="Copperplate Gothic Light" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAceptarMID" layoutX="98.0" layoutY="49.0" mnemonicParsing="false" onAction="#btn_aceptarM" text="Aceptar">
+         <font>
+            <Font name="Copperplate Gothic Light" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

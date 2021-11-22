@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reto4Controller">
+   <children>
+      <TabPane layoutX="15.0" layoutY="56.0" prefHeight="330.0" prefWidth="570.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Ingresar Paciente">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="53.0" layoutY="33.0" text="Ingresa el paciente con todos los datos">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="100.0" text="NOMBRE:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nombreIngresarID" layoutX="115.0" layoutY="98.0" />
+                        <Label layoutX="14.0" layoutY="145.0" text="CEDULA:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cedulaIngresarID" layoutX="115.0" layoutY="143.0" />
+                        <Label layoutX="14.0" layoutY="193.0" text="GENERO:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="generoIngresarID" layoutX="115.0" layoutY="191.0" />
+                        <Label layoutX="278.0" layoutY="101.0" text="MUESTRA 1:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="muestra1IngresarID" layoutX="402.0" layoutY="98.0" />
+                        <TextField fx:id="muestra2IngresarID" layoutX="402.0" layoutY="143.0" />
+                        <TextField fx:id="muestra3IngresarID" layoutX="402.0" layoutY="191.0" />
+                        <Label layoutX="278.0" layoutY="146.0" text="MUESTRA 2:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="278.0" layoutY="193.0" text="MUESTRA 3:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnIngresarID" layoutX="213.0" layoutY="250.0" mnemonicParsing="false" onAction="#btn_ingresar" text="Ingresar datos">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+          <Tab text="Procesar Datos">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="106.0" layoutY="32.0" text="Procesar datos - Base de datos">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="21.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane layoutX="33.0" layoutY="102.0" prefHeight="158.0" prefWidth="192.0">
+                           <content>
+                              <ListView fx:id="txtDatosDB" prefHeight="158.0" prefWidth="188.0" />
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane layoutX="345.0" layoutY="102.0" prefHeight="158.0" prefWidth="192.0">
+                           <content>
+                              <ListView fx:id="txtDatosProcesados" prefHeight="158.0" prefWidth="357.0" />
+                           </content>
+                        </ScrollPane>
+                        <Button fx:id="btnProcesarDatosID" layoutX="239.0" layoutY="167.0" mnemonicParsing="false" onAction="#btn_procesarDatos" text="Procesar">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnObtenerDatosID" layoutX="63.0" layoutY="267.0" mnemonicParsing="false" onAction="#btn_obtenerDatos" text="Obtener datos">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="71.0" layoutY="78.0" text="Datos pacientes">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="375.0" layoutY="78.0" text="Datos procesados">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="Editar Pacientes">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="40.0" layoutY="24.0" text="Consultar paciente">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="67.0" text="Cedula:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="consultarID" layoutX="114.0" layoutY="64.0" />
+                        <Button fx:id="btnConsultarID" layoutX="97.0" layoutY="105.0" mnemonicParsing="false" onAction="#btn_consultar" text="Consultar">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="302.0" layoutY="89.0" text="Nombre:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nombreRegistroID" layoutX="398.0" layoutY="86.0" />
+                        <Label layoutX="302.0" layoutY="131.0" text="Genero:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="generoRegistroID" layoutX="398.0" layoutY="128.0" />
+                        <Label layoutX="302.0" layoutY="171.0" text="Muestra 1:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="muestra1RegistroID" layoutX="398.0" layoutY="168.0" />
+                        <Label layoutX="302.0" layoutY="209.0" text="Muestra 2:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="muestra2RegistroID" layoutX="398.0" layoutY="206.0" />
+                        <Label layoutX="302.0" layoutY="249.0" text="Muestra 3:">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="muestra3RegistroID" layoutX="398.0" layoutY="246.0" />
+                        <Label layoutX="349.0" layoutY="37.0" text="Datos paciente">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="148.0" text="Para eliminar paciente">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnEliminarID" layoutX="107.0" layoutY="182.0" mnemonicParsing="false" onAction="#btn_eliminar" text="Eliminar">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="37.0" layoutY="221.0" text="Para editar paciente">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnEditarID" layoutX="115.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_editar" text="Editar">
+                           <font>
+                              <Font name="Copperplate Gothic Light" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="112.0" layoutY="14.0" text="Detección de enfermedades">
+         <font>
+            <Font name="Copperplate Gothic Light" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
